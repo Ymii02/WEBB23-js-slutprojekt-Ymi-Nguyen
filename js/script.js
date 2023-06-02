@@ -1,19 +1,18 @@
 const apiKey = '3c3db135d35b1cbd6c7f3693af259ee0'; 
 
-//här har lagt in min Apikod
-
 const searchForm = document.getElementById('search-form');
 const cityInput = document.getElementById('city-input');
 const weatherInfo = document.getElementById('weather-info');
 
 searchForm.addEventListener('submit', function(event) {
-  event.preventDefault(); 
+  event.preventDefault(); // 
+
   const city = cityInput.value;
   getWeather(city);
 });
 
 function getWeather(city) {
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=sv`;
 
   fetch(apiUrl)
     .then(response => response.json())
@@ -31,7 +30,8 @@ function getWeather(city) {
         <p>Vindhastighet: ${windSpeed} m/s</p>
         <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="Väderikon">
       `;
-      //Här har jag lagt in både en ikon och beskrivning
+
+      //Har lagt in mina ikoner och beskrving på vädret
 
       weatherInfo.innerHTML = weatherHtml;
       weatherInfo.style.display = 'block';
@@ -42,3 +42,4 @@ function getWeather(city) {
       weatherInfo.style.display = 'block';
     });
 }
+//Gjort att ifall du har skrivit fel på en stad kommer detta upp
