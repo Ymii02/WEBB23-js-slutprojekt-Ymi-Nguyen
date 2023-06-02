@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: pink;
+  }
+  
+  h1 {
+    text-align: center;
+    color: black;
+  }
+  
+  form {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: palevioletred;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: pink;
+  }
+  
+  #weather-info {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid palevioletred;
+    display: none;
+    background-color: palevioletred;
+    color: black;
+  }
+  
+  
